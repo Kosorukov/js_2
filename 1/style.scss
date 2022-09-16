@@ -16,20 +16,28 @@ header {
     display: flex;
     justify-content: end;
     padding: 2%;
-    background-color: #fa8c42;
+    background-color: #000000;
     border-radius: 50px;
     box-sizing: border-box;
 }
 button {
-    background-color: #3ca03f; /* Green */
+    background-color: #ffffff;
     border: none;
-    color: white;
     padding: 12px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     border-radius: 50px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.buy-btn {
+    width: 100%;
+}
+button:hover {
+    transform: scale(1.05);
 }
 .products {
     display: flex;
@@ -39,12 +47,17 @@ button {
 }
 .product-item {
     min-width: 75px;
-    padding: 3%;
-    height: 150px;
-    border: 1px solid #fa8c42;
+    padding: 10px;
+    min-height: 150px;
     border-radius: 20px;
+    background-color: #ccc;
+    margin-bottom: 20px;
 }
 .product-item h3,
 p {
     margin-bottom: 12px;
+}
+.product-item img {
+    width: 100%;
+    border-radius: 20px;
 }
