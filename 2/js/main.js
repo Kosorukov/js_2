@@ -13,7 +13,7 @@ class GoodsList  {
     ]
     }
 
-    renderCatalog(){
+    renderGoodsList(){
         let listHTML = '';
         this.goods.forEach(good => {
             const product = new GoodsItem(good); 
@@ -48,5 +48,35 @@ class GoodsItem {
 
 let goodsList = new GoodsList();
 goodsList.fetchGoods();
-goodsList.renderCatalog();
+goodsList.renderGoodsList();
 console.log(goodsList.getSumPriceAllGoods());
+
+
+class Cart {
+    constructor(){
+    }
+    render(){
+        //Рендер корзины и обновление данных
+        //Пересчёт total
+    }
+    plusCount(){
+        //добавить количество товара в корзине
+        //рендер корзины для обновления данных
+    }
+    minusCount(){
+        //убавить количество товара в корзине с проверкой на 0 и удалением товара из корзины.
+        //рендер корзины для обновления данных
+    }
+}
+
+class CartItem {
+    constructor(){
+    }
+    addToCart(){
+        //добавить товар в корзину
+    }
+    getInfo(){
+        //получение какой-либо информации
+    }
+}
+
