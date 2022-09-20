@@ -6,7 +6,7 @@ document.getElementById('btn').addEventListener('click', () => {
         if (i.checked) {
             total += Number(i.dataset['price']);
             kcal += Number(i.dataset['kcal']);
-            document.querySelector('.calc__text').innerHTML = `Стоимость бургера ${total} рублей <br> Количество калорий ${kcal} kcal`;
         }
     }
+    document.querySelector('.calc__text').innerHTML = `Стоимость бургера ${total} рублей <br> Количество калорий ${kcal} kcal`;
 });
