@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">E-shop</div>
+        <button class="btn-cart" type="button">Корзина</button>
+    </header>
+    <main>
+        <div class="products">
+
+        </div>
+        <div class="burger">
+            <div class="burger__size">
+                <p>Размер бургера</p>
+                <input type="radio" id="big" name="size" value="big"
+                    data-price="100" data-kcal="40" checked>
+                <label for="big">Большой</label>
+                <input type="radio" id="small" name="size" value="small"
+                    data-price="50" data-kcal="20">
+                <label for="small">Маленький</label>
+            </div>
+            <div class="burger__fill">
+                <p>Начинка</p>
+                <input type="radio" id="cheese" name="fill" value="cheese"
+                    data-price="10" data-kcal="20" checked>
+                <label for="cheese">С сыром</label>
+                <input type="radio" id="salad" name="fill" value="salad"
+                    data-price="20" data-kcal="5">
+                <label for="salad">С салатом</label>
+                <input type="radio" id="potato" name="fill" value="potato"
+                    data-price="15" data-kcal="10">
+                <label for="potato">С картофелем</label>
+            </div>
+            <div class="burger__topping">
+                <p>Дополнительно</p>
+                <input type="checkbox" id="flavor" name="flavor" value="flavor"
+                    data-price="15" data-kcal="0">
+                <label for="flavor">Добавить приправу</label><br>
+                <input type="checkbox" id="mayo" name="mayo" value="mayo"
+                    data-price="20" data-kcal="50">
+                <label for="mayo">Добавить майонез</label><br>
+            </div>
+            <div class="calc">
+                <button class="calc__btn" id="btn">Рассчитать</button>
+                <div class="calc__text">
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--beforestart-->
+    <p>
+        <!--afterstart-->
+        <span></span>
+        <!--beforeend-->
+    </p>
+    <!--afterend-->
+
+    <script src="js/main.js"></script>
+    <script src="js/burger.js"></script>
+</body>
+
+</html>
