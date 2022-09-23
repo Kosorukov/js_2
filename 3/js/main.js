@@ -82,7 +82,7 @@ class Basket {
     constructor(container = '.basket') {
         this.container = container;
         this.goods = [];
-        this.toteal = 0;
+        this.total = 0;
         this._getProducts()
             .then(data => {
                 this.goods = data.contents;
@@ -100,7 +100,7 @@ class Basket {
         let totalText = document.querySelector('.total-text');
         let total = 0;
         this.goods.forEach(good => total += good.price);
-        totalText.textContent = `В корзине ${this.goods.length} товаров на сумму ${total} $`
+        totalText.textContent = `В корзине ${this.goods.length} товара на сумму ${total} $`
     }
     render() {
         const block = document.querySelector(this.container);
@@ -126,7 +126,7 @@ class BasketItem {
                 <div class="desc">
                     <h3>${this.title}</h3>
                     <p>${this.price} $</p>
-                    <p>${this.quantity}</p>
+                    <p class="quantity">${this.quantity} шт</p>
                 </div>
             </div>`
     }
@@ -136,19 +136,27 @@ document.querySelector('.btn-cart').addEventListener('click', () => {
     let basketElemsClass = document.querySelector('.basket').classList.toggle('basket-hide');
     let rombElemsClass = document.querySelector('.romb').classList.toggle('basket-hide');;
 })
-document.querySelector('.products').addEventListener('click', (e) => {
-    let target = e.target;
-    if (target.classList.contains('buy-btn')) {
-        let idItem = target.parentNode.parentNode.dataset['id'];
-        let items = document.querySelectorAll('.basket-item');
-        items.forEach(item => {
-            if (item.dataset['id'] === idItem) {
-                // надо увеличить количество в корзине
-            }
-        })
-    }
-})
 
 let list = new ProductsList();
 let basket = new Basket()
+console.log(basket);
 
+
+//Херня какая-то!!!!!!!!!!!!
+// document.querySelector('.products').addEventListener('click', (e) => {
+//     let target = e.target;
+//     if (target.classList.contains('buy-btn')) {
+//         let idItem = target.parentNode.parentNode.dataset['id'];
+//         basket.goods.forEach(item => {
+//             if (item.id_product == idItem) {
+//                 item.quantity += 1;
+//                 document.querySelector('.total-text').innerHTML = `В корзине ${item.quantity} товаров на сумму 46600 $`
+//                 document.querySelectorAll('.quantity').forEach(q => {
+//                     if (item.id_product == idItem) {
+//                         q.innerHTML = item.quantity;
+//                     }
+//                 });
+//             }
+//         })
+//     }
+// })
