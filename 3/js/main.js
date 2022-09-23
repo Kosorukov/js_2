@@ -102,6 +102,16 @@ class Basket {
         this.goods.forEach(good => total += good.price);
         totalText.textContent = `В корзине ${this.goods.length} товара на сумму ${total} $`
     }
+    // _addToCArt(item) {
+    //     if (basket.goods.forEach(basketItem => {
+    //         basketItem.id_product == item.id
+    //     })) {
+    //         basketItem.quantity += 1;
+    //     }
+    //     const block = document.querySelector(this.container);
+    //     const productObj = new BasketItem(item);
+    //     block.insertAdjacentHTML('afterbegin', productObj.render());
+    // }
     render() {
         const block = document.querySelector(this.container);
         for (let product of this.goods) {
@@ -141,22 +151,3 @@ let list = new ProductsList();
 let basket = new Basket()
 console.log(basket);
 
-
-//Херня какая-то!!!!!!!!!!!!
-// document.querySelector('.products').addEventListener('click', (e) => {
-//     let target = e.target;
-//     if (target.classList.contains('buy-btn')) {
-//         let idItem = target.parentNode.parentNode.dataset['id'];
-//         basket.goods.forEach(item => {
-//             if (item.id_product == idItem) {
-//                 item.quantity += 1;
-//                 document.querySelector('.total-text').innerHTML = `В корзине ${item.quantity} товаров на сумму 46600 $`
-//                 document.querySelectorAll('.quantity').forEach(q => {
-//                     if (item.id_product == idItem) {
-//                         q.innerHTML = item.quantity;
-//                     }
-//                 });
-//             }
-//         })
-//     }
-// })
