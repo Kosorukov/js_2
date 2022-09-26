@@ -132,10 +132,12 @@ class BasketItem {
     }
 }
 
+
 document.querySelector('.btn-cart').addEventListener('click', () => {
     let basketElemsClass = document.querySelector('.basket').classList.toggle('basket-hide');
     let rombElemsClass = document.querySelector('.romb').classList.toggle('basket-hide');;
 })
+
 
 let list = new ProductsList();
 let basket = new Basket()
