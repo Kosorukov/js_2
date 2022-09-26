@@ -102,16 +102,6 @@ class Basket {
         this.goods.forEach(good => total += good.price);
         totalText.textContent = `В корзине ${this.goods.length} товара на сумму ${total} $`
     }
-    // _addToCArt(item) {
-    //     if (basket.goods.forEach(basketItem => {
-    //         basketItem.id_product == item.id
-    //     })) {
-    //         basketItem.quantity += 1;
-    //     }
-    //     const block = document.querySelector(this.container);
-    //     const productObj = new BasketItem(item);
-    //     block.insertAdjacentHTML('afterbegin', productObj.render());
-    // }
     render() {
         const block = document.querySelector(this.container);
         for (let product of this.goods) {
