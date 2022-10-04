@@ -11,6 +11,7 @@ const app = new Vue({
         userSearch: '',
         show: false,
         cartTotal: 0,
+        error: false,
     },
     methods: {
         filter() {
@@ -22,6 +23,7 @@ const app = new Vue({
                 .then(result => result.json())
                 .catch(error => {
                     console.log(error);
+                    this.error = true;
                 })
         },
         addProduct(product) {
@@ -55,7 +57,6 @@ const app = new Vue({
             .then(data => {
                 for (let el of data) {
                     this.products.push(el);
-                    //заполним сразу массив filtered для последующей фильтрации
                     this.filtered.push(el);
                 }
 
@@ -64,7 +65,6 @@ const app = new Vue({
             .then(data => {
                 for (let el of data) {
                     this.products.push(el);
-                    //заполним сразу массив filtered для последующей фильтрации
                     this.filtered.push(el);
                 }
             });

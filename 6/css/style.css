@@ -171,3 +171,10 @@ img {
     border: none;
     border-bottom: 2px solid #fafafa;
 }
+.error {
+    margin: 0 auto;
+    text-align: center;
+    color: red;
+    font-size: 50px;
+    font-weight: 900;
+}
